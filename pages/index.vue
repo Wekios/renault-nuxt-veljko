@@ -1,10 +1,10 @@
 <template>
 
-  <section class="inner-wrapper">
+  <main>
 
     <component v-for="(component,index) in homepage" :is="component.type" :data="component" :key="index" />
 
-  </section>
+  </main>
 </template>
 
 <script>

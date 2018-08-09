@@ -1,0 +1,272 @@
+.grid-list {
+  display: grid;
+  text-align: left;
+  margin-bottom: 10rem;
+  >div {
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      top: -1rem;
+    }
+  }
+}
+
+.text-content {
+  padding-top: 1rem;
+}
+
+h4 {
+  display: inline;
+  font-size: 1.8rem;
+  padding-top: 3rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: $warm-grey;
+  padding-top: 1rem;
+}
+
+// News of the Week / First Layout //
+.layout1 {
+  grid-template-columns: 15.6rem 16rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  align-items: baseline;
+  @include breakpoint(desktop) {
+    grid-template-columns: 20rem 34.4rem 49.2rem;
+    grid-template-rows: 13.6rem 45.6rem;
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 0;
+  }
+  .title {
+    grid-column: 1;
+  }
+  .item1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin-top: 8rem;
+    img {
+      height: 19.2rem;
+    }
+    @include breakpoint(desktop) {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      margin-top: 19.2rem;
+      img {
+        height: 26.4rem;
+      }
+    }
+  }
+  .item2 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+    img {
+      height: 27.5rem;
+    }
+    @include breakpoint(desktop) {
+      grid-row-start: 2;
+      grid-column-start: 2;
+      img {
+        height: 45.6rem;
+      }
+    }
+  }
+  .item3 {
+    grid-row-start: 2;
+    grid-column: 1/-1;
+    img {
+      height: 28.4rem;
+    }
+    @include breakpoint(desktop) {
+      grid-row-start: 1;
+      grid-column-start: 3;
+      img {
+        height: 40rem;
+      }
+    }
+  }
+  .item4 {
+    grid-column: 1/-1;
+    display: flex;
+    img {
+      height: 19.2rem;
+      width: 53.3%;
+      margin-right: 2.5%;
+    }
+    @include breakpoint(desktop) {
+      grid-row-start: 3;
+      grid-column-start: 3;
+      img {
+        height: 22.4rem;
+        width: 27.2rem;
+      }
+    }
+  }
+}
+
+// End of the News of the Week //
+////////////////////////////////
+// My Van  /  Second Layout  //
+.layout2::before {
+  content: "";
+  background: $white-two;
+  height: 61.3rem;
+  width: 110rem;
+  position: absolute;
+}
+
+.layout2 {
+  justify-content: center;
+  padding: 8.9rem 8% 0;
+  grid-template-columns: repeat(3, 27.3rem);
+  grid-template-rows: 46.3rem;
+  grid-column-gap: 3.2rem;
+  grid-row-gap: 3.2rem;
+  position: relative;
+  .title {
+    @include fontSizeRem(32, 32);
+    padding-top: 2.3rem;
+    padding-left: 3.2rem;
+    font-family: 'Lato-Black';
+    grid-row-start: 1;
+    grid-column: 1;
+    z-index: 2;
+  }
+  .item1 {
+    grid-row-start: 1;
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row-reverse;
+    .text-content {
+      background: $white;
+      padding: 11.7rem 3rem 6.4rem 3.2rem;
+      h4 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+        font-family: 'Lato-Black';
+      }
+    }
+    img {
+      width: 65.2rem;
+      height: 43.6rem;
+    }
+  }
+  .item2,
+  .item3,
+  .item4 {
+    grid-row-start: 2;
+    img {
+      height: 22.7rem;
+    }
+  }
+  .item2 {
+    grid-column: 1;
+    margin-left: 1.9rem;
+  }
+  .item3 {
+    grid-column-start: 2;
+  }
+  .item4 {
+    grid-column-start: 3;
+    margin-right: 1.9rem;
+  }
+}
+
+//    End    of    My    Van    //
+/////////////////////////////////
+// My Business / Third Layout //
+.layout3 {
+  grid-template-columns: 16rem 15.6rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  &__title {
+    grid-column: -1/1;
+  }
+  @include breakpoint(desktop) {
+    grid-template-columns: repeat(3, 27.2rem) 1fr;
+    grid-template-rows: 17.6rem 36rem;
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 0;
+    .title {
+      grid-column: 1;
+    }
+    .item1 {
+      grid-row-start: 2;
+      grid-column-start: 1;
+      img {
+        height: 36rem;
+      }
+    }
+    .item2 {
+      grid-row-start: 2;
+      grid-column-start: 2;
+      img {
+        height: 22.4rem;
+      }
+    }
+    .item3 {
+      grid-row-start: 1;
+      grid-column: 3/-1;
+      img {
+        height: 40rem;
+      }
+    }
+    .item4 {
+      grid-row-start: 3;
+      grid-column-start: 2;
+      img {
+        height: 22.4rem;
+      }
+    }
+    .item5 {
+      grid-row-start: 3;
+      grid-column: 3;
+      img {
+        height: 36rem;
+      }
+    }
+  }
+}
+
+//  End   of   My   Business    //
+/////////////////////////////////
+// FAQ Slider / Fourth Layout //
+.layout4 {
+  display: flex;
+  position: relative;
+  height: 33.7rem;
+  justify-content: center;
+  background: $white-two;
+  .title {
+    position: absolute;
+    top: -5rem;
+    left: 0;
+  }
+  .item {
+    position: absolute;
+    display: flex;
+    width: 70rem;
+    top: -7.3rem;
+    display: none;
+    cursor: all-scroll; 
+    img {
+      height: 35.2rem;
+      width: 41.6rem;
+      margin-right: 2.5%;
+    }
+    .text-content {
+      width: 27.2rem;
+      align-self: center;
+    }
+    &:hover {
+      top: -7.3rem;
+    }
+  }
+  .item1 {
+    display: flex;
+  }
+}

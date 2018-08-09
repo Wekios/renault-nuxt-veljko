@@ -86,6 +86,7 @@ video {
   text-decoration: none;
   font-weight: 100;
 }
+
 html {
   @include fontSizeVw($base-font-size, $base-font-size); // 10px
   line-height: 1;
@@ -94,28 +95,36 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
+
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
+
 body {
   font-size: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 ol,
 ul {
   list-style: none;
 }
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 caption,
 td,
 th {
@@ -123,10 +132,12 @@ th {
   font-weight: normal;
   vertical-align: middle;
 }
+
 blockquote,
 q {
   quotes: none;
 }
+
 blockquote:after,
 blockquote:before,
 q:after,
@@ -134,39 +145,49 @@ q:before {
   content: "";
   content: none;
 }
+
 b,
 strong {
   font-weight: bold;
 }
+
 em,
 i {
   font-style: italic;
 }
+
 u {
   text-decoration: underline;
 }
+
 a img {
   border: none;
 }
-a, button {
+
+a,
+button {
   cursor: pointer;
   outline: none;
   border-radius: 0;
   padding: 0;
   border: 0;
 }
+
 a {
   color: inherit;
 }
+
 input {
   outline: none;
   border-radius: 0;
 }
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
 article,
 aside,
 details,
