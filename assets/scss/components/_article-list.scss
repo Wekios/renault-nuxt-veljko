@@ -1,0 +1,83 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @include breakpoint(desktop) {
+    align-items: baseline;
+  }
+}
+
+.row--reversed {
+  flex-direction: row-reverse;
+}
+
+// Default Article Preview Classes
+
+.c-article-preview-square {
+  width: 15.6rem;
+  @include breakpoint(desktop) {
+    width: 27.2rem;
+  }
+}
+
+.c-article-preview-square-lg {
+  width: 33.6rem;
+  @include breakpoint(desktop) {
+    width: 49.2rem;
+  }
+}
+
+.c-article-preview-portrait {
+  width: 15.6rem;
+  @include breakpoint(desktop) {
+    width: 20rem;
+  }
+}
+
+.c-article-preview-portrait-lg {
+  width: 16rem;
+  @include breakpoint(desktop) {
+    width: 34.4em;
+  }
+}
+
+// Default Article Preview Classes With Modifiers
+
+.c-article-preview-landscape.padded {
+  width: 33.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: $white-two;
+  padding-bottom: 3.3rem;
+  @include breakpoint(desktop) {
+    width: 60.5rem;
+  }
+
+  .c-article-preview__image {
+    margin-bottom: 0;
+    margin-top: -3.3rem;
+    @include breakpoint(desktop) {
+      margin-left: 6.4rem;
+    }
+  }
+
+  .c-article-preview__content {
+    width: 49%;
+    padding-left: 5%;
+  }
+}
+
+.c-article-preview-square-sm {
+  width: 15.6rem;
+  @include breakpoint(desktop) {
+    width: 18.8rem;
+  }
+}
+
+.c-article-preview-mr {
+  width: 16rem;
+  @include breakpoint(desktop) {
+    width: 20rem;
+  }
+}
