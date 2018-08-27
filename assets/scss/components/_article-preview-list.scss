@@ -11,23 +11,20 @@
       top: -1rem;
     }
   }
-}
-
-.text-content {
-  padding-top: 1rem;
-}
-
-h4 {
-  display: inline;
-  font-size: 1.8rem;
-  padding-top: 3rem;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-  color: $warm-grey;
-  padding-top: 1rem;
+  .text-content {
+    padding-top: 1rem;
+  }
+  h4 {
+    display: inline;
+    font-size: 1.8rem;
+    padding-top: 3rem;
+  }
+  p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    color: $warm-grey;
+    padding-top: 1rem;
+  }
 }
 
 // News of the Week / First Layout //
@@ -252,7 +249,7 @@ p {
     width: 70rem;
     top: -7.3rem;
     display: none;
-    cursor: all-scroll; 
+    cursor: all-scroll;
     img {
       height: 35.2rem;
       width: 41.6rem;

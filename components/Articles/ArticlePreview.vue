@@ -2,7 +2,7 @@
   <nuxt-link 
       tag='div'
       v-if="dataItem.featured_image.length"
-      :to="{path: '/articles/' + dataItem.id}"
+      :to="{path: '/article/' + dataItem.id}"
       :class="'item' + ++this.$vnode.key"
       class="item">
     <img :src="dataItem.featured_image[0].data.file.url" :alt="dataItem.featured_image[0].data.seoalt">

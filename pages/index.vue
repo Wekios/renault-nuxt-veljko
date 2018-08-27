@@ -21,6 +21,9 @@ export default {
     homepage() {
       return this.$store.getters.loadedNodes;
     }
+  },
+  mounted() {
+    console.log(this.o);
   }
 };
 </script>
