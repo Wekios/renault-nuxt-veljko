@@ -230,7 +230,7 @@ export default {
     }
   },
   components: {
-    AppSearch: Search,
+    AppSearch: Search
   }
 };
 </script>
@@ -240,7 +240,7 @@ export default {
 
 .main-nav {
   position: relative;
-  z-index: 10;
+  z-index: 666;
   width: 100%;
   height: 4.4rem;
 
@@ -250,7 +250,7 @@ export default {
 }
 
 .c-nav {
-  z-index: 1;
+  z-index: 666;
   position: fixed;
   height: 4.4rem;
   background-color: #000;
