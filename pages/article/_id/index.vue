@@ -66,7 +66,8 @@
 
                 <p class="article-page__content__tags">
                     Tags:
-                    <nuxt-link tag="a" :to="{path:'/tag/' + article.category[0].name}">{{ article.category[0].name }}</nuxt-link>
+                    <!-- I will convert toLowerCase and removing whitespace to filter later -->
+                    <nuxt-link tag="a" :to="{path:'/tag/' + article.category[0].name.replace(/\s/g,'').toLowerCase()}">{{ article.category[0].name }}</nuxt-link>
                 </p>
 
             </div>
