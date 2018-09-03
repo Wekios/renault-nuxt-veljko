@@ -29,4 +29,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/scss/settings";
+
+.slider {
+  margin-bottom: 3.6rem;
+  @include breakpoint(desktop) {
+    margin-bottom: 21.6rem;
+  }
+}
 </style>

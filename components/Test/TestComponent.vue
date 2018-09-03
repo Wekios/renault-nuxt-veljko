@@ -4,7 +4,7 @@
     <div :class="{ 
       homepage__slider: homepage, 
       diaporama__slider: diporama,
-      slider__thumbs: thumbs 
+      slider__thumbs: thumbs
       }">
       <img :src="currentImage" alt="current image">
       <div class="homepage__slider__text">
@@ -14,6 +14,9 @@
         <h2 class="title">
           {{ title }}
         </h2>
+        <p class="caption">
+          {{imageCaption}}
+        </p>
         <span class="counter">
           <span>0{{activeImage + 1}}</span>/0{{imagesArr.length}}
         </span>
@@ -69,7 +72,12 @@ export default {
     },
     title() {
       return this.imagesArr[this.activeImage].element_item.title;
-    }
+    },
+    imageCaption() {
+      //Show Current Image
+      return this.imagesArr[this.activeImage].element_item.featured_image[0]
+        .data.caption;
+    },
   },
   methods: {
     // Go forward on the images array
@@ -110,6 +118,8 @@ h1 {
   img {
     height: 20rem;
     min-width: 100%;
+    -webkit-filter: grayscale(30%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(30%);
     @include breakpoint(desktop) {
       height: 70rem;
     }
@@ -183,20 +193,36 @@ h1 {
     top: 3rem;
     left: 2rem;
     bottom: 0;
+    color: $white;
+    @include breakpoint(desktop) {
+      top: 19.2rem;
+      left:20.8rem;
+    }
 
     .category {
       display: inline-block;
       margin-bottom: 1.1rem;
+      color: $black;
+      @include breakpoint(desktop) {
+        margin-bottom: 2.8rem;
+      }
     }
     .title {
       @include fontSizeRem(24, 70);
       line-height: 1.08;
       font-family: "Lato-Black";
-      color: $white;
+    }
+    .caption {
+      display: none;
+      @include breakpoint(desktop) {
+        font-size: 3.5rem;
+        line-height: 3.7rem;
+        font-family: 'Lato-Bold';
+        display: block;
+      }
     }
     .counter {
       @include fontSizeRem(12, 40);
-      color: $white;
       font-size: 5rem;
       position: absolute;
       bottom: 3.7rem;

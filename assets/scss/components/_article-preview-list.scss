@@ -2,31 +2,38 @@
   display: grid;
   text-align: left;
   margin-bottom: 10rem;
+
   >div {
     position: relative;
     top: 0;
     cursor: pointer;
     transition: all 0.3s ease;
+
     &:hover {
       top: -1rem;
     }
   }
+
   .text-content {
     padding-top: 1rem;
   }
+
   h4 {
     font-size: 1.4rem;
     line-height: 1.6rem;
     font-family: 'Lato-Black';
     display: inline;
+
     @include breakpoint(desktop) {
       font-size: 1.8rem;
       padding-top: 3rem;
       line-height: 3.7rem;
     }
   }
+
   p {
     display: none;
+
     @include breakpoint(desktop) {
       display: block;
       font-size: 1.4rem;
@@ -34,216 +41,332 @@
       color: $warm-grey;
     }
   }
-} // News of the Week / First Layout //
+}
+
+// News of the Week / First Layout //
 .layout1 {
   grid-template-columns: 15.6rem 16rem;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
   align-items: baseline;
+
   @include breakpoint(desktop) {
     grid-template-columns: 20rem 34.4rem 49.2rem;
     grid-template-rows: 13.6rem 45.6rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 0;
   }
+
   .title {
     grid-column: 1;
   }
+
   .item1 {
     grid-row-start: 1;
     grid-column-start: 1;
     margin-top: 8rem;
+
     img {
       height: 19.2rem;
     }
+
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 1;
       margin-top: 19.2rem;
+
       img {
         height: 26.4rem;
       }
     }
   }
+
   .item2 {
     grid-row-start: 1;
     grid-column-start: 2;
+
     img {
       height: 27.5rem;
     }
+
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 2;
+
       img {
         height: 45.6rem;
       }
     }
   }
+
   .item3 {
     grid-row-start: 2;
     grid-column: 1/-1;
+
     img {
       height: 28.4rem;
     }
+
     @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column-start: 3;
+
       img {
         height: 40rem;
       }
     }
   }
+
   .item4 {
     grid-column: 1/-1;
     display: flex;
+
     img {
       height: 19.2rem;
       width: 53.3%;
       margin-right: 2.5%;
     }
+
     @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column-start: 3;
+
       img {
         height: 22.4rem;
         width: 27.2rem;
       }
     }
   }
-} // End of the News of the Week //
+}
+
+// End of the News of the Week //
 ////////////////////////////////
 // My Van  /  Second Layout  //
 .layout2::before {
   content: "";
-  background: $white-two;
-  height: 61.3rem;
-  width: 110rem;
   position: absolute;
+  background: $white-two;
+  height: 34rem;
+  width: 37.5rem;
+  left: -5.1rem;
+  top: -3.6rem;
+
+  @include breakpoint(desktop) {
+    height: 61.3rem;
+    width: 110rem;
+  }
 }
 
 .layout2 {
-  justify-content: center;
-  padding: 8.9rem 8% 0;
-  grid-template-columns: repeat(3, 27.3rem);
-  grid-template-rows: 46.3rem;
-  grid-column-gap: 3.2rem;
-  grid-row-gap: 3.2rem;
   position: relative;
+  grid-template-columns: 13.2rem 13.2rem;
+  grid-row-gap: 1.6rem;
+  grid-column-gap: 0.8rem;
+  left: 3.2rem;
+
+  @include breakpoint(desktop) {
+    grid-template-rows: 46.3rem;
+    justify-content: center;
+    grid-template-columns: repeat(3, 27.3rem);
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 3.2rem;
+    padding: 8.9rem 8% 0;
+  }
+
   .title {
-    @include fontSizeRem(32, 32);
-    padding-top: 2.3rem;
-    padding-left: 3.2rem;
+    @include fontSizeRem(22, 32);
     font-family: 'Lato-Black';
     grid-row-start: 1;
     grid-column: 1;
     z-index: 2;
+    padding-left: 1.2rem;
+    padding-top: 0.6rem;
+
+    @include breakpoint(desktop) {
+      padding-top: 2.3rem;
+      padding-left: 3.2rem;
+    }
   }
+
   .item1 {
     grid-row-start: 1;
     grid-column: 1/-1;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+
+    @include breakpoint(desktop) {
+      flex-direction: row-reverse;
+    }
+
     .text-content {
       background: $white;
-      padding: 11.7rem 3rem 6.4rem 3.2rem;
+      padding: 4.8rem 1.2rem 2.4rem 1.2rem;
+
+      @include breakpoint(desktop) {
+        padding: 11.7rem 3rem 6.4rem 3.2rem;
+      }
+
       h4 {
-        font-size: 2.8rem;
-        line-height: 3rem;
+        @include fontSizeRem(16, 28);
         font-family: 'Lato-Black';
+        line-height: 1.9rem;
+
+        @include breakpoint(desktop) {
+          line-height: 3rem;
+        }
       }
     }
+
     img {
-      width: 65.2rem;
-      height: 43.6rem;
+      width: 27.2rem;
+      height: 16rem;
+
+      @include breakpoint(desktop) {
+        width: 65.2rem;
+        height: 43.6rem;
+      }
     }
   }
+
   .item2,
   .item3,
   .item4 {
-    grid-row-start: 2;
     img {
-      height: 22.7rem;
+      height: 10.8rem;
+    }
+
+    @include breakpoint(desktop) {
+      img {
+        height: 22.7rem;
+      }
     }
   }
+
   .item2 {
+    grid-row-start: 2;
     grid-column: 1;
-    margin-left: 1.9rem;
+
+    @include breakpoint(desktop) {
+      margin-left: 1.9rem;
+    }
   }
+
+  .item3 {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .item4 {
+    grid-row-start: 2;
+  }
+
+  .item2 {}
+
   .item3 {
     grid-column-start: 2;
   }
+
   .item4 {
-    grid-column-start: 3;
-    margin-right: 1.9rem;
+    grid-column: 1;
+    grid-row: 3;
+
+    @include breakpoint(desktop) {
+      margin-right: 1.9rem;
+      grid-row: 2;
+      grid-column-start: 3;
+    }
   }
-} //    End    of    My    Van    //
+}
+
+//    End    of    My    Van    //
 /////////////////////////////////
 // My Business / Third Layout //
 .layout3 {
   grid-template-columns: 16rem 15.6rem;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+
   &__title {
     grid-column: -1/1;
   }
+
   @include breakpoint(desktop) {
     grid-template-columns: repeat(3, 27.2rem) 1fr;
     grid-template-rows: 17.6rem 36rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 0;
+
     .title {
       grid-column: 1;
     }
+
     .item1 {
       grid-row-start: 2;
       grid-column-start: 1;
+
       img {
         height: 36rem;
       }
     }
+
     .item2 {
       grid-row-start: 2;
       grid-column-start: 2;
+
       img {
         height: 22.4rem;
       }
     }
+
     .item3 {
       grid-row-start: 1;
       grid-column: 3/-1;
+
       img {
         height: 40rem;
       }
     }
+
     .item4 {
       grid-row-start: 3;
       grid-column-start: 2;
+
       img {
         height: 22.4rem;
       }
     }
+
     .item5 {
       grid-row-start: 3;
       grid-column: 3;
+
       img {
         height: 36rem;
       }
     }
   }
-} //  End   of   My   Business    //
+}
+
+//  End   of   My   Business    //
 /////////////////////////////////
 // FAQ Slider / Fourth Layout //
 .layout4 {
-  display: flex;
   position: relative;
-  height: 33.7rem;
   justify-content: center;
+  height: 26rem;
   background: $white-two;
+
+  @include breakpoint(desktop) {
+    display: flex;
+    height: 33.7rem;
+  }
+
   .title {
     position: absolute;
     top: -5rem;
     left: 0;
   }
+
   .item {
     position: absolute;
     display: flex;
@@ -251,35 +374,69 @@
     top: -7.3rem;
     display: none;
     cursor: all-scroll;
+
     img {
-      height: 35.2rem;
-      width: 41.6rem;
-      margin-right: 2.5%;
+      height: 28.1rem;
+      width: 33.6rem;
+
+      @include breakpoint(desktop) {
+        margin-right: 2.5%;
+        height: 35.2rem;
+        width: 41.6rem;
+      }
     }
+
     .text-content {
       width: 27.2rem;
-      align-self: center;
+
+      @include breakpoint(desktop) {
+        align-self: center;
+      }
     }
+
     &:hover {
       top: -7.3rem;
     }
   }
+
   .item1 {
     display: flex;
+    flex-direction: column;
+
+    @include breakpoint(desktop) {
+      flex-direction: row;
+    }
   }
-} ////   End  of FAQ Slider    ////
+}
+
+////   End  of FAQ Slider    ////
+////////////////////////////////
+// bla bla / Layout 5 //////////
+.layout5 {
+  display: none;
+}
+
+////   End  of Layout 5    ////
+// bla bla / Layout 7 //////////
+.layout7 {
+  display: none;
+}
+
+////   End  of Layout 7    ////
 ////////////////////////////////
 // Editor Picks / Layout 8 ////
 .layout8 {
   grid-template-columns: 15.6rem 16rem;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+
   @include breakpoint(desktop) {
     grid-template-columns: 49.2rem 20rem 34.4rem;
     grid-template-rows: 13.6rem 45.6rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 0;
   }
+
   .title {
     @include breakpoint(desktop) {
       grid-column: 1;
@@ -290,73 +447,91 @@
       font-family: 'Lato-Bold';
     }
   }
+
   .item1 {
     grid-column: 1/-1;
+
     img {
       height: 28.4rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 1;
       grid-row: 1;
+
       img {
         height: 40rem;
       }
     }
   }
+
   .item2 {
     grid-column: 1/-1;
     display: flex;
     flex-direction: row-reverse;
+
     img {
       height: 16.4rem;
       width: 53.3%;
       margin-left: 2.5%;
     }
+
     @include breakpoint(desktop) {
       grid-row: 3;
       grid-column: 1;
+
       img {
         height: 22.4rem;
       }
     }
   }
+
   .item3 {
     img {
       height: 19.2rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 2;
       grid-row: 2;
+
       img {
         height: 26.4rem;
       }
     }
   }
+
   .item4 {
     img {
       height: 27.5rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 3;
       grid-row: 2;
+
       img {
         height: 45.6rem;
       }
     }
   }
-} ////   End of Editor Picks   ////
+}
+
+////   End of Editor Picks   ////
 ////////////////////////////////
 // Latest News  / Layout 9 ////
 .layout9 {
   grid-template-columns: 15.6rem 15.6rem;
   grid-column-gap: 2.4rem;
   grid-row-gap: 2rem;
+
   @include breakpoint(desktop) {
     grid-template-columns: 27.2rem 19rem 5rem 19rem 27.2rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 4.8rem;
     align-items: baseline;
   }
+
   .title {
     @include breakpoint(desktop) {
       grid-column: 1;
@@ -367,78 +542,102 @@
       font-family: 'Lato-Bold';
     }
   }
+
   .item1 {
     grid-column: 1;
+
     img {
       height: 13.6rem;
     }
+
     @include breakpoint(desktop) {
       grid-row: 1;
+
       img {
         height: 22.4rem;
       }
     }
   }
+
   .item2 {
     grid-column: 2;
+
     img {
       height: 13.6rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 2/4;
       grid-row: 1;
+
       img {
         height: 22.4rem;
       }
     }
   }
+
   .item3 {
     grid-column: 1/-1;
+
     img {
       height: 28.4rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 4/-1;
       grid-row: 1;
+
       img {
         height: 40rem;
       }
     }
   }
+
   .item4 {
     grid-column: 1/-1;
+
     img {
       height: 28.4rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 1/3;
       grid-row: 2;
+
       img {
         height: 40rem;
       }
     }
   }
+
   .item5 {
     grid-column: 1;
+
     img {
       height: 13.6rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 3/5;
       grid-row: 2;
+
       img {
         height: 22.4rem
       }
     }
   }
+
   .item6 {
     grid-column: 2;
+
     img {
       height: 13.6rem;
     }
+
     @include breakpoint(desktop) {
       grid-column: 5;
       grid-row: 2;
+
       img {
         height: 22.4rem;
       }

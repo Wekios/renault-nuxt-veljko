@@ -108,6 +108,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 100%;
   -webkit-box-sizing: border-box;
