@@ -2,7 +2,9 @@
 
   <main>
 
-    <component v-for="(component,index) in homepage" :is="component.type" :data="component" :key="index" />
+    <div class="inner-wrapper">
+      <component v-for="(component,index) in homepage" :is="component.type" :data="component" :key="index" />
+    </div>
 
   </main>
 </template>
@@ -33,8 +35,12 @@ export default {
 
 .slider {
   margin-bottom: 3.6rem;
+  width: 37.5rem;
+  margin-left: -1.875rem;
   @include breakpoint(desktop) {
-    margin-bottom: 21.6rem;
+    margin-bottom: 8rem;
+    width: 144rem;
+    margin-left: -17rem;
   }
 }
 </style>

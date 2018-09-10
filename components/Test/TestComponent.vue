@@ -77,7 +77,7 @@ export default {
       //Show Current Image
       return this.imagesArr[this.activeImage].element_item.featured_image[0]
         .data.caption;
-    },
+    }
   },
   methods: {
     // Go forward on the images array
@@ -196,7 +196,7 @@ h1 {
     color: $white;
     @include breakpoint(desktop) {
       top: 19.2rem;
-      left:20.8rem;
+      left: 20.8rem;
     }
 
     .category {
@@ -217,7 +217,7 @@ h1 {
       @include breakpoint(desktop) {
         font-size: 3.5rem;
         line-height: 3.7rem;
-        font-family: 'Lato-Bold';
+        font-family: "Lato-Bold";
         display: block;
       }
     }

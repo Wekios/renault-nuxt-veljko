@@ -1,10 +1,16 @@
 <template>
   <main id="my-business">
-
+    
     <!-- Header -->
+
     <header>
 
-      <component v-if="component.type == 'image'" v-for="(component,index) in page" :is="'div'" :key="index" class="header-image" :style="{backgroundImage: 'url(' + component.data.file.url +')'}">
+      <component 
+      v-if="component.type == 'image'" 
+      v-for="(component,index) in page" 
+      :is="'div'" :key="index" 
+      class="header-image" 
+      :style="{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),' + 'url(' + component.data.file.url +')'}">
 
         <div class="header__text">
 
@@ -78,8 +84,7 @@ header {
 .header {
   &-image {
     position: relative;
-    background: center no-repeat
-      linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45));
+    background: center no-repeat;
     background-size: cover;
     height: 20rem;
     @include breakpoint(desktop) {

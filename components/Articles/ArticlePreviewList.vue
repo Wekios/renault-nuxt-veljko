@@ -1,12 +1,10 @@
 <template>
-  <section class="inner-wrapper">
-    <div class="grid-list" :class="'layout' + data.data.item_id">
-      <h2 class="title">
-        {{ data.data.custom_item_name }}
-      </h2>
-      <app-article-preview v-for="(dataItem,index) in data.element_item.list_items" :key="index" :dataItem="dataItem" />
-    </div>
-  </section>
+  <div class="grid-list" :class="'layout' + data.data.item_id">
+    <h2 class="title">
+      {{ data.data.custom_item_name }}
+    </h2>
+    <app-article-preview v-for="(dataItem,index) in data.element_item.list_items" :key="index" :dataItem="dataItem" />
+  </div>
 </template>
 
 <script>

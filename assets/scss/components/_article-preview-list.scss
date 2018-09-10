@@ -14,6 +14,10 @@
     }
   }
 
+  .title {
+    font-family: 'Lato-Black';
+  }
+
   .text-content {
     padding-top: 1rem;
   }
@@ -59,6 +63,13 @@
 
   .title {
     grid-column: 1;
+    grid-row: 1;
+    align-self: flex-start;
+
+    @include breakpoint(desktop) {
+      grid-row: 2;
+      width: 10rem;
+    }
   }
 
   .item1 {
@@ -154,6 +165,8 @@
   @include breakpoint(desktop) {
     height: 61.3rem;
     width: 110rem;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -175,7 +188,6 @@
 
   .title {
     @include fontSizeRem(22, 32);
-    font-family: 'Lato-Black';
     grid-row-start: 1;
     grid-column: 1;
     z-index: 2;
@@ -194,6 +206,10 @@
     display: flex;
     flex-direction: column-reverse;
 
+    &:hover {
+      top: 0;
+    }
+
     @include breakpoint(desktop) {
       flex-direction: row-reverse;
     }
@@ -208,7 +224,6 @@
 
       h4 {
         @include fontSizeRem(16, 28);
-        font-family: 'Lato-Black';
         line-height: 1.9rem;
 
         @include breakpoint(desktop) {
@@ -286,21 +301,36 @@
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
 
-  &__title {
-    grid-column: -1/1;
-  }
-
   @include breakpoint(desktop) {
     grid-template-columns: repeat(3, 27.2rem) 1fr;
     grid-template-rows: 17.6rem 36rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 0;
+  }
 
-    .title {
-      grid-column: 1;
+  .title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: -4rem;
+
+    @include breakpoint(desktop) {
+      grid-row: 1;
+      width: 5rem;
+      align-self: center;
+      margin-top: 0;
+    }
+  }
+
+  .item1 {
+    align-self: flex-start;
+    grid-column: 1;
+    grid-row: 1;
+
+    img {
+      height: 27.6rem;
     }
 
-    .item1 {
+    @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 1;
 
@@ -308,8 +338,14 @@
         height: 36rem;
       }
     }
+  }
 
-    .item2 {
+  .item2 {
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 2;
 
@@ -317,8 +353,12 @@
         height: 22.4rem;
       }
     }
+  }
 
-    .item3 {
+  .item3 {
+    grid-column: 1/-1;
+
+    @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column: 3/-1;
 
@@ -326,8 +366,14 @@
         height: 40rem;
       }
     }
+  }
 
-    .item4 {
+  .item4 {
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column-start: 2;
 
@@ -335,8 +381,14 @@
         height: 22.4rem;
       }
     }
+  }
 
-    .item5 {
+  .item5 {
+    img {
+      height: 27.6rem;
+    }
+
+    @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column: 3;
 
@@ -409,20 +461,183 @@
   }
 }
 
-////   End  of FAQ Slider    ////
-////////////////////////////////
-// bla bla / Layout 5 //////////
+////   End  of FAQ Slider    //////
+//////////////////////////////////
+//// What's new / Layout 5 //////
 .layout5 {
-  display: none;
+  grid-template-columns: 15.6rem 16rem;
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+
+  @include breakpoint(desktop) {
+    grid-template-columns: repeat(3, 27.2rem) 1fr;
+    grid-template-rows: 11.2rem 36rem 13.6rem 48.8rem;
+    grid-column-gap: 3.2rem;
+    grid-row-gap: 0;
+  }
+
+  .title {
+    grid-column: 1;
+    grid-row: 1;
+    margin-top: -6rem;
+    width: 5rem;
+    line-height: 2rem;
+    align-self: flex-start;
+    font-family: 'Airways';
+  }
+
+  .item1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 2;
+      grid-column-start: 1;
+
+      img {
+        height: 22.4rem;
+      }
+    }
+  }
+
+  .item2 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+
+    img {
+      height: 27.5rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 2;
+      grid-column-start: 2;
+
+      img {
+        height: 36rem;
+      }
+    }
+  }
+
+  .item3 {
+    img {
+      height: 27.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 1;
+      grid-column-start: 3;
+
+      img {
+        height: 36rem;
+      }
+    }
+  }
+
+  .item4 {
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 1;
+      grid-column-start: 4;
+
+      img {
+        height: 26.4rem;
+      }
+    }
+  }
+
+  .item5 {
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 3;
+      grid-column-start: 1;
+      margin-top: 2.6rem;
+
+      img {
+        height: 22.4rem;
+      }
+    }
+  }
+
+  .item6 {
+    img {
+      height: 13.6rem;
+    }
+
+    @include breakpoint(desktop) {
+      grid-row-start: 4;
+      grid-column-start: 2;
+
+      img {
+        height: 22.4rem;
+      }
+    }
+  }
 }
 
-////   End  of Layout 5    ////
-// bla bla / Layout 7 //////////
+////   End  of Layout 5    /////
+///////////////////////////////
+// Yellow Slider / Layout 7 //
 .layout7 {
   display: none;
+
+  @include breakpoint(desktop) {
+    display: block;
+    float: right;
+    position: relative;
+    width: 49.2rem;
+    top: -59rem;
+    border: 3.7rem solid $sun-yellow;
+    height: 48.8rem;
+
+    div,
+    .title {
+      float: left;
+      top: 0;
+      position: absolute;
+    }
+
+    .title {
+      z-index: 666;
+    }
+
+    div {
+      height: 100%;
+
+      img {
+        height: 100%;
+      }
+
+      &:hover {
+        top: 0;
+      }
+    }
+  }
 }
 
-////   End  of Layout 7    ////
+////   End  of Layout 7    //////
+////////////////////////////////
+//// Most Read / Layout 6 /////
+.layout6 {
+  display: block;
+  background: url('~/static/images/most-read.jpg');
+  height: 15rem;
+
+  .title {
+    text-align: center;
+  }
+}
+
+////   End  of Layout 6    //////
 ////////////////////////////////
 // Editor Picks / Layout 8 ////
 .layout8 {
