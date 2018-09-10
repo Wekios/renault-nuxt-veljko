@@ -3,7 +3,7 @@
   <main>
 
     <div class="inner-wrapper">
-      <component v-for="(component,index) in homepage" :is="component.type" :data="component" :key="index" />
+      <component v-for="(component,index) in pageData" :is="component.type" :data="component" :key="index" />
     </div>
 
   </main>
@@ -19,13 +19,40 @@ export default {
     node,
     node_list
   },
-  computed: {
-    homepage() {
-      return this.$store.getters.loadedNodes;
+  data() {
+    return {
+      bottom: false,
+      pageData: [],
+      count: 1
+    };
+  },
+  methods: {
+    bottomVisible() {
+      const scrollY = window.scrollY;
+      const visible = document.documentElement.clientHeight;
+      const pageHeight = document.documentElement.scrollHeight;
+      const bottomOfPage = visible + scrollY >= pageHeight;
+      return bottomOfPage || pageHeight < visible;
+    },
+    addNodes() {
+      this.count += 2;
+      this.pageData = this.$store.getters.loadedNodes.slice(0, this.count);
+    }
+  },
+  watch: {
+    bottom(bottom) {
+      if (bottom) {
+        // this.pageData = this.$store.getters.loadedNodes.slice(0, this.count);
+        this.addNodes();
+        console.log("works" + this.count);
+      }
     }
   },
   mounted() {
-    // console.log(this);
+    window.addEventListener("scroll", () => {
+      this.bottom = this.bottomVisible();
+    });
+    this.addNodes();
   }
 };
 </script>

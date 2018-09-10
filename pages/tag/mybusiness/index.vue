@@ -1,16 +1,11 @@
 <template>
   <main id="my-business">
-    
+
     <!-- Header -->
 
     <header>
 
-      <component 
-      v-if="component.type == 'image'" 
-      v-for="(component,index) in page" 
-      :is="'div'" :key="index" 
-      class="header-image" 
-      :style="{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),' + 'url(' + component.data.file.url +')'}">
+      <component v-if="component.type == 'image'" v-for="(component,index) in page" :is="'div'" :key="index" class="header-image" :style="{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),' + 'url(' + component.data.file.url +')'}">
 
         <div class="header__text">
 
@@ -33,14 +28,13 @@
 
     <!-- Rest of the page! -->
 
-    <app-breadcrumbs/>
+    <div class="inner-wrapper">
 
-    <component 
-      v-if="component.type == 'node_list'" 
-      v-for="(component,index) in page" 
-      :data="component" 
-      :is="'node_list'" 
-      :key="index"/>
+      <app-breadcrumbs/>
+
+      <component v-if="component.type == 'node_list'" v-for="(component,index) in page" :data="component" :is="'node_list'" :key="index" />
+
+    </div>
 
   </main>
 </template>

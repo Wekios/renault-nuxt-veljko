@@ -630,7 +630,14 @@
 .layout6 {
   display: block;
   background: url('~/static/images/most-read.jpg');
-  height: 15rem;
+  height: 25rem;
+  width: 37.5rem;
+  margin: 10rem 0;
+
+  @include breakpoint(desktop) {
+    width: 144rem;
+    margin-left: -17rem;
+  }
 
   .title {
     text-align: center;

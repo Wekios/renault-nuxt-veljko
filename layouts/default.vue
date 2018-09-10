@@ -2,7 +2,7 @@
   <div>
     <Navigation/>
     <nuxt class="main-wrapper" />
-    <Footer/>
+    <!-- <Footer/> -->
   </div>
 </template>
 

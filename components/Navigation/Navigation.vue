@@ -21,6 +21,12 @@
         <div class="c-nav__menu-container" :class="{'is-active': dropMenuState}">
           <div class="c-nav__menu-inner-wrapper">
             <ul class="c-nav__menu-list">
+              <nuxt-link tag="li" to="/tag/mybusiness">
+                My Business
+              </nuxt-link>
+              <nuxt-link tag="li" to="/tag/faq">
+                FaQ
+              </nuxt-link>
               <li class="c-nav__signup">
                 <div class="c-nav__menu-arrow c-nav__menu-arrow--empty u-only-mob"></div>
                 <span class="c-nav__menu-item" @click="stateController('signup')">sign up</span>
@@ -415,6 +421,7 @@ export default {
     > li {
       text-transform: uppercase;
       margin-top: 3.4rem;
+      cursor: pointer;
 
       @include breakpoint(desktop) {
         display: inline-block;
