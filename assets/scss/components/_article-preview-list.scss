@@ -78,18 +78,11 @@
     grid-column-start: 1;
     margin-top: 8rem;
 
-    img {
-      height: 19.2rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 1;
       margin-top: 19.2rem;
-
-      img {
-        height: 26.4rem;
-      }
     }
   }
 
@@ -97,17 +90,10 @@
     grid-row-start: 1;
     grid-column-start: 2;
 
-    img {
-      height: 27.5rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 2;
-
-      img {
-        height: 45.6rem;
-      }
     }
   }
 
@@ -115,17 +101,10 @@
     grid-row-start: 2;
     grid-column: 1/-1;
 
-    img {
-      height: 28.4rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column-start: 3;
 
-      img {
-        height: 40rem;
-      }
     }
   }
 
@@ -134,7 +113,6 @@
     display: flex;
 
     img {
-      height: 19.2rem;
       width: 53.3%;
       margin-right: 2.5%;
     }
@@ -144,7 +122,6 @@
       grid-column-start: 3;
 
       img {
-        height: 22.4rem;
         width: 27.2rem;
       }
     }
@@ -236,25 +213,9 @@
 
     img {
       width: 27.2rem;
-      height: 16rem;
 
       @include breakpoint(desktop) {
         width: 65.2rem;
-        height: 43.6rem;
-      }
-    }
-  }
-
-  .item2,
-  .item3,
-  .item4 {
-    img {
-      height: 10.8rem;
-    }
-
-    @include breakpoint(desktop) {
-      img {
-        height: 22.7rem;
       }
     }
   }
@@ -328,32 +289,17 @@
     grid-column: 1;
     grid-row: 1;
 
-    img {
-      height: 27.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 1;
-
-      img {
-        height: 36rem;
-      }
     }
   }
 
   .item2 {
-    img {
-      height: 13.6rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 2;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
@@ -363,40 +309,22 @@
     @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column: 3/-1;
-
-      img {
-        height: 40rem;
-      }
     }
   }
 
   .item4 {
-    img {
-      height: 13.6rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column-start: 2;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
   .item5 {
-    img {
-      height: 27.6rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column: 3;
-
-      img {
-        height: 36rem;
-      }
     }
   }
 }
@@ -430,7 +358,6 @@
     cursor: all-scroll;
 
     img {
-      height: 28.1rem;
       width: 33.6rem;
 
       @include breakpoint(desktop) {
@@ -496,17 +423,10 @@
     grid-row-start: 1;
     grid-column-start: 1;
 
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 1;
 
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
@@ -514,78 +434,40 @@
     grid-row-start: 1;
     grid-column-start: 2;
 
-    img {
-      height: 27.5rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 2;
       grid-column-start: 2;
-
-      img {
-        height: 36rem;
-      }
     }
   }
 
   .item3 {
-    img {
-      height: 27.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column-start: 3;
-
-      img {
-        height: 36rem;
-      }
     }
   }
 
   .item4 {
-    img {
-      height: 13.6rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 1;
       grid-column-start: 4;
-
-      img {
-        height: 26.4rem;
-      }
     }
   }
 
   .item5 {
-    img {
-      height: 13.6rem;
-    }
 
     @include breakpoint(desktop) {
       grid-row-start: 3;
       grid-column-start: 1;
       margin-top: 2.6rem;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
   .item6 {
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row-start: 4;
       grid-column-start: 2;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 }
@@ -679,17 +561,9 @@
   .item1 {
     grid-column: 1/-1;
 
-    img {
-      height: 28.4rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 1;
       grid-row: 1;
-
-      img {
-        height: 40rem;
-      }
     }
   }
 
@@ -699,7 +573,6 @@
     flex-direction: row-reverse;
 
     img {
-      height: 16.4rem;
       width: 53.3%;
       margin-left: 2.5%;
     }
@@ -707,40 +580,20 @@
     @include breakpoint(desktop) {
       grid-row: 3;
       grid-column: 1;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
   .item3 {
-    img {
-      height: 19.2rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 2;
       grid-row: 2;
-
-      img {
-        height: 26.4rem;
-      }
     }
   }
 
   .item4 {
-    img {
-      height: 27.5rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 3;
       grid-row: 2;
-
-      img {
-        height: 45.6rem;
-      }
     }
   }
 }
@@ -774,101 +627,53 @@
   .item1 {
     grid-column: 1;
 
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-row: 1;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
   .item2 {
     grid-column: 2;
 
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 2/4;
       grid-row: 1;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 
   .item3 {
     grid-column: 1/-1;
 
-    img {
-      height: 28.4rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 4/-1;
       grid-row: 1;
-
-      img {
-        height: 40rem;
-      }
     }
   }
 
   .item4 {
     grid-column: 1/-1;
 
-    img {
-      height: 28.4rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 1/3;
       grid-row: 2;
-
-      img {
-        height: 40rem;
-      }
     }
   }
 
   .item5 {
     grid-column: 1;
 
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 3/5;
       grid-row: 2;
-
-      img {
-        height: 22.4rem
-      }
     }
   }
 
   .item6 {
     grid-column: 2;
 
-    img {
-      height: 13.6rem;
-    }
-
     @include breakpoint(desktop) {
       grid-column: 5;
       grid-row: 2;
-
-      img {
-        height: 22.4rem;
-      }
     }
   }
 }

@@ -23,7 +23,7 @@ export default {
     return {
       bottom: false,
       pageData: [],
-      count: 1
+      count: 0
     };
   },
   methods: {
@@ -42,7 +42,6 @@ export default {
   watch: {
     bottom(bottom) {
       if (bottom) {
-        // this.pageData = this.$store.getters.loadedNodes.slice(0, this.count);
         this.addNodes();
         console.log("works" + this.count);
       }
