@@ -16,6 +16,7 @@
 
   .title {
     font-family: 'Lato-Black';
+    @include fontSizeRem(22, 32);
   }
 
   .text-content {
@@ -68,7 +69,7 @@
 
     @include breakpoint(desktop) {
       grid-row: 2;
-      width: 10rem;
+      width: 19rem;
     }
   }
 
@@ -195,6 +196,7 @@
     padding-top: 0.6rem;
 
     @include breakpoint(desktop) {
+      width: 16.8rem;
       padding-top: 2.3rem;
       padding-left: 3.2rem;
     }
@@ -481,9 +483,13 @@
     grid-row: 1;
     margin-top: -6rem;
     width: 5rem;
-    line-height: 2rem;
+    line-height: 1;
     align-self: flex-start;
     font-family: 'Airways';
+
+    @include breakpoint(desktop) {
+      align-self: center;
+    }
   }
 
   .item1 {
