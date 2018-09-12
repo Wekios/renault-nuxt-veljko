@@ -82,6 +82,9 @@ import axios from "axios";
 import AppSocial from "~/components/Social";
 
 export default {
+  components: {
+    AppSocial
+  },
   asyncData(context) {
     return axios
       .get(
@@ -95,11 +98,7 @@ export default {
           article: res.data.data.nodes[0]
         };
       });
-  },
-  components: {
-    AppSocial
-  },
-  mounted() {}
+  }
 };
 </script>
 

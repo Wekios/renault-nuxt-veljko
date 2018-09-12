@@ -22,8 +22,7 @@ export default {
   data() {
     return {
       bottom: false,
-      pageData: [],
-      count: 0
+      pageData: []
     };
   },
   methods: {
@@ -35,15 +34,18 @@ export default {
       return bottomOfPage || pageHeight < visible;
     },
     addNodes() {
-      this.count += 2;
-      this.pageData = this.$store.getters.loadedNodes.slice(0, this.count);
+      this.$store.state.count += 2;
+      this.pageData = this.$store.getters.loadedNodes.slice(
+        0,
+        this.$store.state.count
+      );
     }
   },
   watch: {
     bottom(bottom) {
-      if (bottom) {
+      if (bottom && this.$store.state.count < this.pageData.length + 1) {
         this.addNodes();
-        console.log("works" + this.count);
+        console.log("works" + this.$store.state.count);
       }
     }
   },

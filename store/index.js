@@ -7,7 +7,8 @@ const homepage =
 const createStore = () => {
   return new Vuex.Store({
     state: {
-      loadedNodes: []
+      loadedNodes: [],
+      count: 0
     },
     mutations: {
       setNodes(state, nodes) {

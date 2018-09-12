@@ -60,6 +60,7 @@
     grid-template-rows: 13.6rem 45.6rem;
     grid-column-gap: 3.2rem;
     grid-row-gap: 0;
+    align-items: initial;
   }
 
   .title {
@@ -92,7 +93,7 @@
 
 
     @include breakpoint(desktop) {
-      grid-row-start: 2;
+      grid-row: 2;
       grid-column-start: 2;
     }
   }
@@ -237,8 +238,6 @@
   .item4 {
     grid-row-start: 2;
   }
-
-  .item2 {}
 
   .item3 {
     grid-column-start: 2;
