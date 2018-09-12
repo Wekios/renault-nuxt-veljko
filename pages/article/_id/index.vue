@@ -1,34 +1,23 @@
 <template>
     <div class="article-page">
-
         <!-- DETERMINE THE PAGE HEADER -->
-
         <div class="article-page__header">
             <!-- HEADER GOES HERE! -->
-
         </div>
-
         <!-- THE REST OF THE PAGE CONTENT -->
-
         <div class="inner-wrapper">
-
             <a href="#" class="c-btn c-btn--yellow article-page__category">
                 {{ article.category[0].name }}
             </a>
-
             <h1 class="article-page__title">
                 {{ article.title }}
             </h1>
-
             <app-social/>
-
             <!-- Page Content -->
             <div class="article-page__content">
-
                 <p class="article-page__content__date">
                     {{ article.created_at }}
                 </p>
-
                 <div v-for="(element, index) in article.elements" :key="index">
                     <h2 v-if="element.data.heading_type === 'h2'">{{ element.data.text }}</h2>
                     <h3 v-if="element.data.heading_type === 'h3'">{{ element.data.text }}</h3>
@@ -98,6 +87,23 @@ export default {
           article: res.data.data.nodes[0]
         };
       });
+  },
+  data() {
+    return {};
+  },
+  methods: {
+    handleScroll() {
+      const scrollY = window.scrollY;
+      const halfOfPage = document.documentElement.scrollHeight / 3;
+      const readIt = scrollY >= halfOfPage;
+      this.$store.state.scrolled = readIt;
+    }
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   }
 };
 </script>
