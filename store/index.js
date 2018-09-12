@@ -8,7 +8,8 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       loadedNodes: [],
-      count: 0
+      count: 0,
+      scrolled: false
     },
     mutations: {
       setNodes(state, nodes) {
