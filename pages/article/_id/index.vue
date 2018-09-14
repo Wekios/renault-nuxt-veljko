@@ -7,7 +7,7 @@
         <!-- THE REST OF THE PAGE CONTENT -->
         <div class="inner-wrapper">
             <a href="#" class="c-btn c-btn--yellow article-page__category">
-                {{ article.category[0].name }}
+                {{ article.category }}
             </a>
             <h1 class="article-page__title">
                 {{ article.title }}
@@ -53,11 +53,11 @@
                     </div>
                 </div>
 
-                <p class="article-page__content__tags">
+                <!-- I will convert toLowerCase and removing whitespace to filter later -->
+                <!-- <p class="article-page__content__tags">
                     Tags:
-                    <!-- I will convert toLowerCase and removing whitespace to filter later -->
                     <nuxt-link tag="a" :to="{path:'/tag/' + article.category[0].name.replace(/\s/g,'').toLowerCase()}">{{ article.category[0].name }}</nuxt-link>
-                </p>
+                </p> -->
 
             </div>
 

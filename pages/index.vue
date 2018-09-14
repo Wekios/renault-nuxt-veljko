@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import node from "~/components/Test/TestComponent";
+import node from "~/components/Sliders/Slider";
 import node_list from "~/components/Articles/ArticlePreviewList";
 
 export default {

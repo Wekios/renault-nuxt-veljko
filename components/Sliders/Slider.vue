@@ -60,23 +60,23 @@ export default {
   computed: {
     imagesArr() {
       // Filter the INVALID images or if there is none featured image
-      return this.images.filter(image => image.element_item.featured_image[0]);
+      return this.images.filter(image => image.element_item.featured_image);
     },
     currentImage() {
       //Show Current Image
-      return this.imagesArr[this.activeImage].element_item.featured_image[0]
-        .data.file.url;
+      return this.imagesArr[this.activeImage].element_item.featured_image.data
+        .file.url;
     },
     category() {
-      return this.imagesArr[this.activeImage].element_item.category[0].name;
+      return this.imagesArr[this.activeImage].element_item.category;
     },
     title() {
       return this.imagesArr[this.activeImage].element_item.title;
     },
     imageCaption() {
       //Show Current Image
-      return this.imagesArr[this.activeImage].element_item.featured_image[0]
-        .data.caption;
+      return this.imagesArr[this.activeImage].element_item.featured_image.data
+        .caption;
     }
   },
   methods: {
